@@ -4,19 +4,37 @@ import java.util.Scanner;
 
 public class Solution {
 
-    public static int fourDivisors(int[] num) {
-        int totalCount = 0;
+    public static int sumFourDivisors(int[] nums) {
+        int totalSum = 0;
 
-        for (int n : num) {
-            int count = 0;
-            int sum = 0;
+        for (int num : nums) {
+            int divSum = getFourDivisorSum(num);
+            totalSum += divSum;
+        }
+        return totalSum;
+    }
 
-            for(int i = 0; i * i <= n; i++) {
-                
+    private static int getFourDivisorSum(int n) {
+        int sum = 0;
+        int count = 0;
+
+        for (int i = 1; i * i <= n; i++) {
+            if (n % i == 0) {
+                int d1 = i;
+                int d2 = n / i;
+
+                if (d1 == d2) {
+                    count++;
+                    sum += d1;
+                } else {
+                    count += 2;
+                    sum += d1 + d2;
+                }
+
+                if (count > 4) return 0;
             }
         }
-
-        return totalCount;
+        return count == 4 ? sum : 0;
     }
 
     public static void main(String[] args) {
@@ -29,7 +47,7 @@ public class Solution {
         for(int i = 0; i<parts.length ; i++) {
             nums[i] = Integer.parseInt(parts[i]);
         }
-        System.out.println("Output : " + fourDivisors(nums));
+        System.out.println("Output : " + sumFourDivisors(nums));
         sc.close();
     }
 }
