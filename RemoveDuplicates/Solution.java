@@ -31,5 +31,6 @@ public class Solution {
         int result = removeDuplicates(nums);
 
         System.out.println("Final output" + result);
+        sc.close();
     }   
 }
