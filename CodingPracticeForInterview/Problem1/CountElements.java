@@ -1,4 +1,4 @@
-package CodingPractice.Problem1;
+package CodingPracticeForInterview.Problem1;
 
 import java.util.HashMap;
 import java.util.Scanner;
