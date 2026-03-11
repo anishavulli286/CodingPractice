@@ -35,5 +35,4 @@ public class CountElements {
         System.out.println("Count of values: " + count);
         sc.close();
     }
-    
 }

@@ -32,7 +32,7 @@ public class RemoveElements {
         int result = removeElement(nums, n);
         System.out.println("Final output" + result);
         System.out.println("Array after removal: " +
-                Arrays.toString(Arrays.copyOf(nums, result)));
+        Arrays.toString(Arrays.copyOf(nums, result)));
         sc.close();
     }
 }
