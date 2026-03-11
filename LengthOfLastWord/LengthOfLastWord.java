@@ -9,6 +9,7 @@ public class LengthOfLastWord {
         return splited[splited.length - 1].length();
     }
 
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the string that needs to be validated with spaces: ");
@@ -16,7 +17,7 @@ public class LengthOfLastWord {
 
         int result = lengthOfLastWord(input);
         System.out.println("Result: " + result);
-
+        sc.close();
     }
 
 }

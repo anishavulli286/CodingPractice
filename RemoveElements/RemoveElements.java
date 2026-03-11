@@ -3,8 +3,6 @@ package RemoveElements;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import static java.util.Collections.sort;
-
 public class RemoveElements {
     public static int removeElement(int[] nums, int val) {
         if (nums == null || nums.length == 0) return 0;
@@ -18,6 +16,7 @@ public class RemoveElements {
         }
         return k;
     }
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the array of values");
@@ -34,5 +33,6 @@ public class RemoveElements {
         System.out.println("Final output" + result);
         System.out.println("Array after removal: " +
                 Arrays.toString(Arrays.copyOf(nums, result)));
+        sc.close();
     }
 }

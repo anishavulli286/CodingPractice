@@ -17,6 +17,7 @@ public class Solution {
 
         return count+1;
     }
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the array of values");
@@ -30,5 +31,7 @@ public class Solution {
         int result = removeDuplicates(nums);
 
         System.out.println("Final output" + result);
+
+        sc.close();
     }   
 }
