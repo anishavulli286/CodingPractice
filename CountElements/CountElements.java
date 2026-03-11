@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class CountElements {
 
     public static int countElements(List<Integer> responseTimes) {
-        if(responseTimes.size() == 0) return 0;
+         if(responseTimes.isEmpty()) return 0;
         double sum = responseTimes.get(0);
         int count = 0;
         
@@ -22,16 +22,17 @@ public class CountElements {
         return count;
     }
 
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter numbers sepearated by space");
         String[] arr = sc.nextLine().split((" "));
         List<Integer> numList = new ArrayList<>();
-        for(int i = 0; i < arr.length; i++) {
-            numList.add(Integer.parseInt(arr[i]));
+        for (String arr1 : arr) {
+            numList.add(Integer.valueOf(arr1));
         }
         int count = countElements(numList);
         System.out.println("Count of values: " + count);
+        sc.close();
     }
-    
 }
