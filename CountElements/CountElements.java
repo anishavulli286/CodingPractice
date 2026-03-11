@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class CountElements {
 
     public static int countElements(List<Integer> responseTimes) {
-         if(responseTimes.isEmpty()) return 0;
+        if(responseTimes.isEmpty()) return 0;
         double sum = responseTimes.get(0);
         int count = 0;
         
