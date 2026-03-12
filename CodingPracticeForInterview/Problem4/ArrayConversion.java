@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayConversion {
+
+    @SuppressWarnings("ConvertToTryWithResources")
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter number of rows: ");
@@ -25,6 +27,6 @@ public class ArrayConversion {
             }
         }
         System.out.println("Output Array: " + Arrays.toString(outputArr));
+        sc.close();
     }
-
 }

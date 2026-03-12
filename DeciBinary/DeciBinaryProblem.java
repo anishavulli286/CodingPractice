@@ -21,5 +21,6 @@ public class DeciBinaryProblem {
         String number = sc.nextLine();
         int num = calculateNumbers(number);
         System.out.println(num);
+        sc.close();
     }
 }
