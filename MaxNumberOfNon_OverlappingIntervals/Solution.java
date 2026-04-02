@@ -28,7 +28,7 @@ public class Solution {
     }
 
     public static int maxNonOverlapping(List<List<Integer>> intervals) {
-        if (intervals == null || intervals.size() == 0) return 0;
+        if (intervals == null || intervals.isEmpty()) return 0;
 
         intervals.sort((a, b) -> a.get(1) - b.get(1));
 
